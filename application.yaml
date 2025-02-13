@@ -7,3 +7,13 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: ${EUREKA_SERVER_ADDRESS:http://127.0.0.1:8761/eureka}
+
+#JPA Configs
+spring: 
+  jpa:
+    hibernate:
+      ddl-auto: update       # Options: validate | update | create | create-drop
+    show-sql: true           # Logs SQL queries in the console
+    properties:
+      hibernate:
+        format_sql: true     # Formats SQL output for better readability
